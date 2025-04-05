@@ -51,8 +51,15 @@ app.get("/deletar/:id", function(req, res){
     })
 })
 
-const port = process.env.PORT || 2603;
-
-app.listen(port, () => {
-  console.log("Servidor rodando na porta " + port);
-});
+db.sequelize.sync({ force: true })
+  .then(() => {
+    console.log('Tabelas sincronizadas com sucesso.');
+  })
+  .catch((error) => {
+    console.error('Erro ao sincronizar tabelas:', error);
+  });
+  
+    // INICIA O SERVIDOR SÓ DEPOIS
+    app.listen(10000, () => {
+      console.log('Servidor rodando na porta 10000')
+    })
