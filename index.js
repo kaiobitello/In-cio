@@ -51,6 +51,8 @@ app.get("/deletar/:id", function(req, res){
     })
 })
 
-app.listen(2603, function() {
-    console.log("Servidor rodando na porta http://localhost:2603");
+const port = process.env.PORT || 2603;
+
+app.listen(port, () => {
+  console.log("Servidor rodando na porta " + port);
 });
