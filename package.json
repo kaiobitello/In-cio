@@ -19,6 +19,7 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "sequelize": "^6.37.7"
   }
 }
