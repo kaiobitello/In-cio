@@ -1,10 +1,20 @@
 import { Sequelize } from "sequelize";
-const sequelize = new Sequelize('inicio-db', 'root', '01039119kaio!', {
-    host: "postgresql://inicio_db_user:RhQ14MWglQXe5lDpITZbVeFE5EjxULmP@dpg-cvopn6vgi27c73astd10-a/inicio_db",
-    port: 5432,
-    dialect: "postgres"
-
-});
+const sequelize = new Sequelize(
+    'inicio_db',                 // nome do banco
+    'inicio_db_user',            // usuário
+    'RhQ14MWglQXe5lDpITZbVeFE5EjxULmP', // senha
+    {
+      host: 'dpg-cvopn6vgi27c73astd10-a.db.postgres.render.com', // domínio do host
+      port: 5432,
+      dialect: 'postgres',
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false
+        }
+      }
+    }
+  );
 
 
 export default {
