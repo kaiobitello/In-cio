@@ -60,7 +60,7 @@ db.sequelize.sync()
     console.error('Erro ao sincronizar tabelas:', error);
   });
   
-    // INICIA O SERVIDOR SÓ DEPOIS
-    app.listen(10000, () => {
-      console.log('Servidor rodando na porta 10000')
-    })
+  const PORT = process.env.PORT || 10000;
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
