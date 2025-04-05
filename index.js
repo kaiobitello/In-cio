@@ -52,7 +52,7 @@ app.get("/deletar/:id", function(req, res){
     })
 })
 
-db.sequelize.sync({ force: true })
+db.sequelize.sync()
   .then(() => {
     console.log('Tabelas sincronizadas com sucesso.');
   })
