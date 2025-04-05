@@ -2,6 +2,7 @@ import express from 'express';
 const app = express();
 import { engine } from 'express-handlebars';
 import Post from './views/models/Post.js'
+import db from './views/models/db.js';
 
 // Configuração da Template Engine
 app.engine('handlebars', engine({
