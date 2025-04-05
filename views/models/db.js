@@ -4,7 +4,7 @@ const sequelize = new Sequelize(
     'inicio_db_user',            // usuário
     'RhQ14MWglQXe5lDpITZbVeFE5EjxULmP', // senha
     {
-      host: 'dpg-cvopn6vgi27c73astd10-a.db.postgres.render.com', // domínio do host
+      host: 'dpg-cvopn6vgi27c73astd10-a.oregon-postgres.render.com', // domínio do host
       port: 5432,
       dialect: 'postgres',
       dialectOptions: {
