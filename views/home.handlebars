@@ -18,7 +18,7 @@
 
     .ini-container {
         display: flex;
-        gap: 30px;
+        gap: 40px;
         justify-content: flex-start;
     }
 
@@ -32,12 +32,13 @@
   .Postagens-container {
   display: flex;
   flex-direction: column; /* Empilha os itens verticalmente */
-  width: 370px;
-  height: auto; /* Deixa a altura dinâmica para ajustar ao conteúdo */
+  width: 490px;
+  height: 265px; 
   padding: 10px;
   border: 4px solid black;
   background-color: rgb(20, 74, 146);
   border-radius: 9px;
+  word-wrap: break-word;
   overflow: hidden; /* Impede que o texto ultrapasse o contêiner */
 }
 
@@ -53,7 +54,7 @@
 
   .inf-container {
     text-align: center;
-    margin-top: 145px;
+    margin-top: 135px;
   }
 
   a {
@@ -85,6 +86,10 @@
   text-align: left; /* Alinha o texto à esquerda */
 }
 
+hr {
+    margin-top: 130px;
+}
+
 
 </style>
 
@@ -97,14 +102,13 @@
 
 <div class="inf-container">
 <p class="conteudo">{{conteudo}}</p> 
-<hr>
-<p style="font-size: 17px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:aliceblue; margin-top: 88px;">{{titulo}}</p>
-
-<div style="height: 22px; width:86px; background-color:red; margin-top: 40px; border-radius: 6px; padding-left:2px;">
-    <a href="/deletar/{{id}}" style="color: aliceblue; white-space: nowrap; padding-left: -6px; font-size:13px">DELETAR</a>
-</div>
+<h1 style="font-size: 17px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:aliceblue; margin-top: 150px; position: relative">{{titulo}}</h1>
 
 </div>
+
+<!--<div style="height: 22px; width:86px; background-color:red; margin-top: 282px; border-radius: 6px; margin-left: -8px; position: absolute">
+<a href="/deletar/{{id}}" style="color: aliceblue; margin-left: 13px; font-size:13px; margin-top: 3px; position:absolute" p>DELETAR</a> 
+</div> -->
 
 </div>
 
