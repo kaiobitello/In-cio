@@ -16,7 +16,7 @@ app.set('view engine', 'handlebars');
 
 //BodyParser
 app.use(express.urlencoded({extended:true}))
-app.use(express.json())
+app.use(express.json())   
 
 // Rotas
 
@@ -24,7 +24,7 @@ app.get('/', function(req, res){
     Post.findAll({order: [['id', 'desc']]}).then(function(posts){
         res.render('home', {posts: posts})
     })
-})
+}) 
 
 app.get('/cad', function(req, res) {
     res.render('formulario')
@@ -46,11 +46,13 @@ app.post("/pos", function(req,res){
 
 app.get("/deletar/:id", function(req, res){
     Post.destroy({where: {'id': req.params.id}}).then(function(){
-        res.redirect('/')
+        res.redirect('/?mensagem=Deletado com sucesso!');
     }).catch(function(erro){
         res.send(`Essa postagem não existe!`)
     })
 })
+
+
 
 db.sequelize.sync()
   .then(() => {

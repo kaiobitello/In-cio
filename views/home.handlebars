@@ -1,11 +1,113 @@
-<h1>LISTA DE POSTS:</h1>
-<hr>
+<div class="ini-container">
+
+<a href="/" class="HOME">HOME</a>
+<a href="/cad" class="Cadastrar">CADASTRAR</a>
+
+</div>
+
+<hr class="linhaini">
+
+<style>
+
+    .HOME {
+        color: aliceblue;
+        font-size: 29px;
+        padding: 13px;
+        padding-left: 5px;
+    }
+
+    .ini-container {
+        display: flex;
+        gap: 30px;
+        justify-content: flex-start;
+    }
+
+    .post-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+    }
+
+  .Postagens-container {
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  width: 370px;
+  height: auto; /* Deixa a altura dinâmica para ajustar ao conteúdo */
+  padding: 10px;
+  border: 4px solid black;
+  background-color: rgb(20, 74, 146);
+  border-radius: 9px;
+  overflow: hidden; /* Impede que o texto ultrapasse o contêiner */
+}
+
+
+  .Cadastrar {
+
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(238, 240, 243);
+    padding: 14px;
+
+  }
+
+  .inf-container {
+    text-align: center;
+    margin-top: 145px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+    .delete {
+        color: rgb(241, 229, 229);
+    }
+
+    h1 {
+        color: rgb(219, 228, 243);
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-color: rgb(33, 33, 36);
+    }
+
+    .linhaini {
+        margin-top: -6px;
+    }    
+
+    .conteudo {
+  margin-top: -110px;
+  font-size: 16px; /* Ajusta o tamanho para caber no retângulo */
+  color: aliceblue;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+
+</style>
+
+<div class="post-container">
+
 {{#each posts}}
 
-<h2>{{titulo}}</h2>
-<p>{{conteudo}}</p>
-<a href="/deletar/{{id}}">Deletar</button></a>
+
+<div class='Postagens-container'>
+
+<div class="inf-container">
+<p class="conteudo">{{conteudo}}</p> 
 <hr>
+<p style="font-size: 17px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:aliceblue; margin-top: 88px;">{{titulo}}</p>
+
+<div style="height: 22px; width:86px; background-color:red; margin-top: 40px; border-radius: 6px; padding-left:2px;">
+    <a href="/deletar/{{id}}" style="color: aliceblue; white-space: nowrap; padding-left: -6px; font-size:13px">DELETAR</a>
+</div>
+
+</div>
+
+</div>
 
 {{/each}}
 
+</div>
